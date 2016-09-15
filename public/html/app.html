@@ -1,1 +1,9 @@
-<h1>{{title}}</h1>
+<div>
+    <h1>{{title}}</h1>         
+</div>
+<span (click)=loadData(1)>Distributeurs</span>
+<span (click)=loadData(2)>Users</span>
+<span (click)=loadData(3)>Listings</span><br/>
+<hr/>
+<br/>
+<input type="text" [(ngModel)]="title" placeholder="My Custom title"><br/>
