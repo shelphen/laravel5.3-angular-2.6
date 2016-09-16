@@ -1,0 +1,7 @@
+<div *ngIf="user">
+    <table>        
+        <tr><td>Id</td><td>{{user.id}}</td></tr>
+        <tr><td>Name</td><td>{{user.name}}</td></tr>
+        <tr><td>MyListings</td><td (click)="showListings(user.id)">(+)</td></tr>        
+    </table>
+</div>
