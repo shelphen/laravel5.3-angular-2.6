@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 //import { HttpModule }    from '@angular/http';
 
 import { AppComponent }      from './app';
-
+import { UserDetailComponent }      from './user-detail.component';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AppComponent }      from './app';
         FormsModule,
         //HttpModule
     ],
-    declarations: [ AppComponent ],
+    declarations: [ AppComponent, UserDetailComponent ],
     //providers:    [ HeroService ],
     bootstrap:    [ AppComponent ]
 })

@@ -8,13 +8,13 @@
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-9",
     "elixir-typescript": "~2.0.0",
-    "concurrently": "^2.0.0"
+    "concurrently": "^2.0.0",
+    "typescript": "^2.0.2"
   },
   "dependencies": {
-    "@angular/core": "2.0.0-rc.6",    
+    "@angular/core": "2.0.0",    
     "@angular/common": "2.0.0",
-    "@angular/compiler": "2.0.0",
-    "@angular/compiler-cli": "0.6.0",        
+    "@angular/compiler": "2.0.0",    
     "@angular/forms": "2.0.0",
     "@angular/http": "2.0.0",
     "@angular/platform-browser": "2.0.0",

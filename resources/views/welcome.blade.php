@@ -10,6 +10,7 @@
 
         <!-- Angular Libs -->
         <script src="libs/core-js/client/shim.min.js"></script>
+        
         <script src="libs/zone.js/dist/zone.js"></script>
         <script src="libs/reflect-metadata/Reflect.js"></script>
         <script src="libs/systemjs/dist/system.src.js"></script>

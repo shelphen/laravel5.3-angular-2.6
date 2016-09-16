@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Distributeur,User,Listing} from './object-metadata';
+import {User,Listing} from './object-metadata';
 
 @Component({
     selector: 'my-app',

@@ -1,6 +1,12 @@
 {    
-    "compilerOptions": {        
+    "compilerOptions": {
+        "target": "es6",
+        "module": "system",
+        "moduleResolution": "node",
+        "sourceMap": true,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true        
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false        
     }
 }

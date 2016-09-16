@@ -14,7 +14,6 @@ var elixirTypescript = require('elixir-typescript');
 //elixir.config.appPath = '';
 elixir(function(mix) {
     mix.sass('app.scss');
-
     mix.copy('node_modules/@angular', 'public/libs/@angular');
     mix.copy('node_modules/rxjs', 'public/libs/rxjs');
     mix.copy('node_modules/systemjs', 'public/libs/systemjs');
@@ -25,10 +24,7 @@ elixir(function(mix) {
 
     mix.typescript(
         [
-            //'*.ts'
-            'app.ts',
-            'module.ts',
-            'main.ts'
+            '*.ts'
         ],
         'public/js',
         {

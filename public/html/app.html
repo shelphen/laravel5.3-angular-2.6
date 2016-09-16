@@ -9,7 +9,7 @@
     <tr *ngFor="let user of myUsers">
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
-        <td (click)=selectUser(user.id)>Show Detail</td>
+        <td (click)=selectUser(user)>Show Detail</td>
     </tr>        
 </table>
 <hr/>
