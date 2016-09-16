@@ -1,22 +1,28 @@
-import { Component } from '@angular/core';
-import {User,Listing} from './object-metadata';
+import { Component, OnInit } from '@angular/core';
+import { User,Listing } from './object-metadata';
+import { UserService } from './service/user.service'
 
 @Component({
     selector: 'my-app',
     templateUrl: './html/app.html',
-    styleUrls: ['./css/app.css']
+    styleUrls: ['./css/app.css'],
+    providers: [ UserService ]
 })
 
-export class AppComponent
+export class AppComponent implements OnInit
 {
+    constructor(private userService: UserService){}
     public title :string = 'List of Users';
     public selectedUser:number;
-    public myUsers:User[] = [
-        {id:1,name:"Previsite",status:true},
-        {id:2,name:"WorldPost",status:true},
-        {id:3,name:"ListGlob",status:false}
-    ];
+    public myUsers:User[];
     selectUser(id:number):void{
         this.selectedUser=id;
+    }
+    getUsers():void{
+        this.myUsers = this.userService.getUsers();
+    }
+
+    ngOnInit(): void {
+        this.getUsers();
     }
 }

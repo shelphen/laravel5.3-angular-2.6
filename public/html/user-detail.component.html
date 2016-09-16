@@ -5,10 +5,4 @@
         <tr><td>MyListings</td><td (click)="showListings(user.id)">(+)</td></tr>        
     </table>
 </div>
-<div *ngIf="myListings">
-    <ul>
-        <li *ngFor="let listing of myListings">
-            {{listing.id}} | {{listing.title}} | {{listing.texte}} 
-        </li>
-    </ul>
-</div>
+<my-listings [listings]=myListings></my-listings>

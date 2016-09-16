@@ -24,9 +24,9 @@ elixir(function(mix) {
 
     mix.typescript(
         [
-            '*.ts'
+            'mock/*.ts'
         ],
-        'public/js',
+        'public/js/mock',        
         {
             "target": "es6",
             "module": "system",
@@ -38,5 +38,37 @@ elixir(function(mix) {
             "noImplicitAny": false
         }
     );
+    mix.typescript(
+        [
+            '*.ts',
+        ],
+        'public/js',        
+        {
+            "target": "es6",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+        }
+    );
+    mix.typescript(
+        [            
+            'service/*.ts',            
+        ],
+        'public/js/service',        
+        {
+            "target": "es6",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+        }
+    );        
 
 });
