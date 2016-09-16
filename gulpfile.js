@@ -40,6 +40,22 @@ elixir(function(mix) {
     );
     mix.typescript(
         [
+            'component/*.ts'
+        ],
+        'public/js/component',        
+        {
+            "target": "es6",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+        }
+    );    
+    mix.typescript(
+        [
             '*.ts',
         ],
         'public/js',        

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User,Listing } from './object-metadata';
-import { UserService } from './service/user.service'
+import { User,Listing } from '../object-metadata';
+import { UserService } from '../service/user.service'
 
 @Component({
     selector: 'my-app',

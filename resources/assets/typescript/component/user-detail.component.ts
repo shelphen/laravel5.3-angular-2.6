@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { User, Listing } from './object-metadata';
-import { ListingService } from './service/listing.service'
+import { User, Listing } from '../object-metadata';
+import { ListingService } from '../service/listing.service'
 
 @Component({    
     selector: 'user-detail',
