@@ -1,0 +1,7 @@
+<div *ngIf="listings">
+    <ul>
+        <li *ngFor="let listing of listings">
+            {{listing.id}} | {{listing.title}} | {{listing.texte}} 
+        </li>
+    </ul>
+</div>

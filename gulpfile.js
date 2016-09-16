@@ -14,7 +14,6 @@ var elixirTypescript = require('elixir-typescript');
 //elixir.config.appPath = '';
 elixir(function(mix) {
     mix.sass('app.scss');
-
     mix.copy('node_modules/@angular', 'public/libs/@angular');
     mix.copy('node_modules/rxjs', 'public/libs/rxjs');
     mix.copy('node_modules/systemjs', 'public/libs/systemjs');
@@ -25,12 +24,9 @@ elixir(function(mix) {
 
     mix.typescript(
         [
-            //'*.ts'
-            'app.ts',
-            'module.ts',
-            'main.ts'
+            'mock/*.ts'
         ],
-        'public/js',
+        'public/js/mock',        
         {
             "target": "es6",
             "module": "system",
@@ -42,5 +38,53 @@ elixir(function(mix) {
             "noImplicitAny": false
         }
     );
+    mix.typescript(
+        [
+            'component/*.ts'
+        ],
+        'public/js/component',        
+        {
+            "target": "es6",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+        }
+    );    
+    mix.typescript(
+        [
+            '*.ts',
+        ],
+        'public/js',        
+        {
+            "target": "es6",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+        }
+    );
+    mix.typescript(
+        [            
+            'service/*.ts',            
+        ],
+        'public/js/service',        
+        {
+            "target": "es6",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+        }
+    );        
 
 });

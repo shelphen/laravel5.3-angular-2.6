@@ -4,7 +4,9 @@ import { FormsModule }   from '@angular/forms';
 //import { HttpModule }    from '@angular/http';
 //import { RouterModule }    from '@angular/http';
 
-import { AppComponent }      from './app';
+import { AppComponent }      from './component/app.component';
+import { UserDetailComponent }      from './component/user-detail.component';
+import { ListingsComponent }      from './component/listings.component';
 
 
 
@@ -14,7 +16,7 @@ import { AppComponent }      from './app';
         FormsModule,
         //HttpModule
     ],
-    declarations: [ AppComponent ],
+    declarations: [ AppComponent, UserDetailComponent, ListingsComponent ],
     //providers:    [ HeroService ],
     bootstrap:    [ AppComponent ]
 })

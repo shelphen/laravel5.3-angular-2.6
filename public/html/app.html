@@ -1,1 +1,17 @@
-<h1>{{title}}</h1>
+<div>
+    <h1>{{title}}</h1>         
+</div>
+<span (click)=loadData(1)>Distributeurs</span>
+<span (click)=loadData(2)>Users</span>
+<span (click)=loadData(3)>Listings</span><br/>
+<table>
+    <tr><td>ID</td><td>Name</td></tr>
+    <tr *ngFor="let user of myUsers">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td (click)=selectUser(user)>Show Detail</td>
+    </tr>        
+</table>
+<hr/>
+<br/>
+<user-detail [user]="selectedUser"></user-detail>
