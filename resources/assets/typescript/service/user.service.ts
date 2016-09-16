@@ -9,4 +9,8 @@ export class UserService {
     getUsers():User[]{
         return MockUsers
     }
+
+    getUsersPromise():Promise<User[]>{
+        return Promise.resolve(MockUsers);
+    }
 }

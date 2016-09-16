@@ -22,7 +22,13 @@ export class AppComponent implements OnInit
         this.myUsers = this.userService.getUsers();
     }
 
+    getUsersPromise():void{
+        this.userService.getUsersPromise().then(
+            result => this.myUsers = result
+        ).catch(function(error){console.log(error)});
+    }
+
     ngOnInit(): void {
-        this.getUsers();
+        this.getUsersPromise();
     }
 }

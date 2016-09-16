@@ -10,6 +10,12 @@ export class ListingService {
         return MockListings
     }
 
+    getListingsPromise():Promise<Listing[]>{
+        //return Promise.resolve(MockListings);
+        return new Promise<Listing[]>(resolve => setTimeout(resolve, 2000)) // delay 2 seconds
+            .then(() => this.getListings());        
+    }
+
     getListingsByUser(id:number){
         return MockListings.filter(function(listing:Listing){
             return listing.user==id;
