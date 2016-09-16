@@ -1,0 +1,9 @@
+{    
+    "compilerOptions": {
+        "name" : "tsconfig",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "amd",
+        "target": "ES6" 
+    }
+}

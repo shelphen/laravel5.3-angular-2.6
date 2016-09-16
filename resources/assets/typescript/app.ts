@@ -27,9 +27,21 @@ export class Listing{
 export class AppComponent
 {
     public title :string = 'List of Distributeurs';
-    public myDistributer:Distributeur[];
-    public myUsers:User[];
+    public myDistributer:Distributeur[] = [
+     {id:1,name:"Previsite"},
+     {id:2,name:"WorldPost"},
+     {id:3,name:"ListGlob"}
+    ];
+    public currentDistrib:number;
+    public myUsers:User[] = [
+        {id:1,name:"Previsite",status:true},
+        {id:2,name:"WorldPost",status:true},
+        {id:3,name:"ListGlob",status:false}
+    ];
     public myListings:Listing[];
+    goToDistrib(id:number):void{
+        this.currentDistrib=id;
+    }
     loadData(id:number):void{
         switch(id){
             case 1:

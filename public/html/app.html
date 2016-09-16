@@ -4,6 +4,19 @@
 <span (click)=loadData(1)>Distributeurs</span>
 <span (click)=loadData(2)>Users</span>
 <span (click)=loadData(3)>Listings</span><br/>
+<table>
+    <tr><td>ID</td><td>Name</td></tr>
+    <tr *ngFor="let distro of myDistributer">
+        <td>{{distro.id}}</td>
+        <td>{{distro.name}}</td>
+        <td (click)=goToDistrib(distro.id)>GoToDetail</td>
+    </tr>        
+</table>
 <hr/>
 <br/>
 <input type="text" [(ngModel)]="title" placeholder="My Custom title"><br/>
+<div *ngIf="currentDistrib">
+    <li *ngFor="let user of myUsers">
+        <span *ngIf="user.status">{{user.id}} - {{user.name}}</span>
+    </li>    
+</div>
