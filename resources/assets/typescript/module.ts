@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 //import { HttpModule }    from '@angular/http';
 
-import { AppComponent }      from './component/app.component';
-import { UserDetailComponent }      from './component/user-detail.component';
-import { ListingsComponent }      from './component/listings.component';
+//import { AppComponent }      from './cmp/app';
+import { HeroComponent }      from './cmp/hero';
+import { HeroDetailComponent }      from './cmp/hero-detail';
+import {HeroService} from "./service/hero.service";
 
 
 
@@ -15,9 +16,9 @@ import { ListingsComponent }      from './component/listings.component';
         FormsModule,
         //HttpModule
     ],
-    declarations: [ AppComponent, UserDetailComponent, ListingsComponent ],
-    //providers:    [ HeroService ],
-    bootstrap:    [ AppComponent ]
+    declarations: [ HeroComponent, HeroDetailComponent ],
+    providers:    [ HeroService ],
+    bootstrap:    [ HeroComponent ]
 })
 
 export class AppModule { }

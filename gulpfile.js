@@ -40,9 +40,9 @@ elixir(function(mix) {
     );
     mix.typescript(
         [
-            'component/*.ts'
+            'cmp/*.ts'
         ],
-        'public/js/component',        
+        'public/js/cmp',
         {
             "target": "es6",
             "module": "system",

@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/debug', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/', function () {
+    return redirect('users');
+});
+
+Route::get('/users', function () {
+    return view('users');
+});
+
+Route::get('/listings', function () {
+    return view('listings');
 });

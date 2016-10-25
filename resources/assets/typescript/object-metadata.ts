@@ -1,6 +1,7 @@
-export class Distributeur{
+export class Hero{
     public id:number;
     public name:string;
+    public status:boolean;
 }
 
 export class User{
